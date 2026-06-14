@@ -1,4 +1,5 @@
 "use client"
+import { CustomBeam } from "@/components/custom-beam"
 import { NavbarComponent } from "@/components/navbar"
 
 export default function Home() {
@@ -23,19 +24,19 @@ export default function Home() {
         <section className="flex h-screen items-center justify-center px-6 text-center md:h-[90vh]">
           <div className="max-w-2xl">
             <h1
-              className="mb-6 text-4xl font-bold text-white drop-shadow-lg md:text-6xl"
-              style={{
-                textShadow:
-                  "0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3)",
-              }}
+              className="mb-6 text-4xl font-semibold text-white drop-shadow-lg md:text-6xl"
+              // style={{
+              //   textShadow:
+              //     "0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.3)",
+              // }}
             >
               Falkland Islands Car Hire Explore at Your Own Pace
             </h1>
             <p
-              className="mb-8 text-lg font-medium text-white/95 drop-shadow-md md:text-xl"
-              style={{
-                textShadow: "0 1px 4px rgba(0, 0, 0, 0.3)",
-              }}
+              className="mb-8 text-lg font-medium text-white/95 drop-shadow-md md:text-lg"
+              // style={{
+              //   textShadow: "0 1px 4px rgba(0, 0, 0, 0.3)",
+              // }}
             >
               Hire a 4×4 or standard vehicle from Stanley and discover the
               Falkland Islands on your own terms. Short-term holiday hire,
@@ -43,6 +44,8 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+        <CustomBeam />
       </div>
     </div>
   )
