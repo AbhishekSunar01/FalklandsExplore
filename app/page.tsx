@@ -2,6 +2,7 @@
 import { CustomBeam } from "@/components/custom-beam"
 import { NavbarComponent } from "@/components/navbar"
 import { CanvasText } from "@/components/ui/canvas-text"
+import { StackTestimonials } from "@/components/ui/testimonial"
 import { cn } from "@/lib/utils"
 
 export default function Home() {
@@ -76,6 +77,8 @@ export default function Home() {
             />
           </h2>
         </div>
+
+        <StackTestimonials />
       </div>
     </div>
   )
