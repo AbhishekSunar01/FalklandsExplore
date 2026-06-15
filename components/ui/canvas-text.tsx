@@ -1,34 +1,34 @@
-"use client";
-import { cn } from "@/lib/utils";
-import React, { useEffect, useRef, useState, useCallback } from "react";
+"use client"
+import { cn } from "@/lib/utils"
+import React, { useEffect, useRef, useState, useCallback } from "react"
 
 interface CanvasTextProps {
-  text: string;
-  className?: string;
-  backgroundClassName?: string;
-  colors?: string[];
-  animationDuration?: number;
-  lineWidth?: number;
-  lineGap?: number;
-  curveIntensity?: number;
-  overlay?: boolean;
+  text: string
+  className?: string
+  backgroundClassName?: string
+  colors?: string[]
+  animationDuration?: number
+  lineWidth?: number
+  lineGap?: number
+  curveIntensity?: number
+  overlay?: boolean
 }
 
 function resolveColor(color: string): string {
   if (color.startsWith("var(")) {
-    const varName = color.slice(4, -1).trim();
+    const varName = color.slice(4, -1).trim()
     const resolved = getComputedStyle(document.documentElement)
       .getPropertyValue(varName)
-      .trim();
-    return resolved || color;
+      .trim()
+    return resolved || color
   }
-  return color;
+  return color
 }
 
 export function CanvasText({
   text,
   className = "",
-  backgroundClassName = "bg-white dark:bg-neutral-950",
+  backgroundClassName = "bg-white",
   colors = ["#ff6b6b", "#4ecdc4", "#45b7d1", "#96ceb4", "#ffeaa7", "#dfe6e9"],
   animationDuration = 5,
   lineWidth = 1.5,
@@ -36,139 +36,139 @@ export function CanvasText({
   curveIntensity = 60,
   overlay = false,
 }: CanvasTextProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const textRef = useRef<HTMLSpanElement>(null);
-  const bgRef = useRef<HTMLSpanElement>(null);
-  const animationRef = useRef<number>(0);
-  const startTimeRef = useRef<number>(0);
-  const [bgColor, setBgColor] = useState("#0a0a0a");
-  const [resolvedColors, setResolvedColors] = useState<string[]>([]);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-  const [font, setFont] = useState("");
+  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const textRef = useRef<HTMLSpanElement>(null)
+  const bgRef = useRef<HTMLSpanElement>(null)
+  const animationRef = useRef<number>(0)
+  const startTimeRef = useRef<number>(0)
+  const [bgColor, setBgColor] = useState("#0a0a0a")
+  const [resolvedColors, setResolvedColors] = useState<string[]>([])
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
+  const [font, setFont] = useState("")
 
   const updateColors = useCallback(() => {
     if (bgRef.current) {
-      const computed = window.getComputedStyle(bgRef.current);
-      setBgColor(computed.backgroundColor);
+      const computed = window.getComputedStyle(bgRef.current)
+      setBgColor(computed.backgroundColor)
     }
-    const resolved = colors.map(resolveColor);
-    setResolvedColors(resolved);
-  }, [colors]);
+    const resolved = colors.map(resolveColor)
+    setResolvedColors(resolved)
+  }, [colors])
 
   useEffect(() => {
-    updateColors();
+    updateColors()
 
-    const observer = new MutationObserver(updateColors);
+    const observer = new MutationObserver(updateColors)
     observer.observe(document.documentElement, {
       attributes: true,
       attributeFilter: ["class"],
-    });
+    })
 
-    return () => observer.disconnect();
-  }, [updateColors]);
+    return () => observer.disconnect()
+  }, [updateColors])
 
   useEffect(() => {
-    const textEl = textRef.current;
-    if (!textEl) return;
+    const textEl = textRef.current
+    if (!textEl) return
 
     const updateDimensions = () => {
-      const rect = textEl.getBoundingClientRect();
-      const computed = window.getComputedStyle(textEl);
+      const rect = textEl.getBoundingClientRect()
+      const computed = window.getComputedStyle(textEl)
       setDimensions({
         width: Math.ceil(rect.width) || 400,
         height: Math.ceil(rect.height) || 200,
-      });
+      })
       setFont(
-        `${computed.fontWeight} ${computed.fontSize} ${computed.fontFamily}`,
-      );
-    };
+        `${computed.fontWeight} ${computed.fontSize} ${computed.fontFamily}`
+      )
+    }
 
-    updateDimensions();
+    updateDimensions()
 
-    const resizeObserver = new ResizeObserver(updateDimensions);
-    resizeObserver.observe(textEl);
+    const resizeObserver = new ResizeObserver(updateDimensions)
+    resizeObserver.observe(textEl)
 
-    return () => resizeObserver.disconnect();
-  }, [text, className]);
+    return () => resizeObserver.disconnect()
+  }, [text, className])
 
   useEffect(() => {
-    const canvas = canvasRef.current;
+    const canvas = canvasRef.current
     if (
       !canvas ||
       resolvedColors.length === 0 ||
       dimensions.width === 0 ||
       !font
     )
-      return;
+      return
 
-    const ctx = canvas.getContext("2d", { alpha: true });
-    if (!ctx) return;
+    const ctx = canvas.getContext("2d", { alpha: true })
+    if (!ctx) return
 
-    const { width, height } = dimensions;
-    const dpr = window.devicePixelRatio || 1;
+    const { width, height } = dimensions
+    const dpr = window.devicePixelRatio || 1
 
-    canvas.width = width * dpr;
-    canvas.height = height * dpr;
+    canvas.width = width * dpr
+    canvas.height = height * dpr
 
-    ctx.font = font;
-    const metrics = ctx.measureText(text);
-    const ascent = metrics.actualBoundingBoxAscent;
-    const descent = metrics.actualBoundingBoxDescent;
-    const baselineY = (height + ascent - descent) / 2;
+    ctx.font = font
+    const metrics = ctx.measureText(text)
+    const ascent = metrics.actualBoundingBoxAscent
+    const descent = metrics.actualBoundingBoxDescent
+    const baselineY = (height + ascent - descent) / 2
 
-    const numLines = Math.floor(height / lineGap) + 10;
-    startTimeRef.current = performance.now();
+    const numLines = Math.floor(height / lineGap) + 10
+    startTimeRef.current = performance.now()
 
     const animate = (currentTime: number) => {
-      const elapsed = (currentTime - startTimeRef.current) / 1000;
-      const phase = (elapsed / animationDuration) * Math.PI * 2;
+      const elapsed = (currentTime - startTimeRef.current) / 1000
+      const phase = (elapsed / animationDuration) * Math.PI * 2
 
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      ctx.clearRect(0, 0, width, height);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0)
+      ctx.clearRect(0, 0, width, height)
 
-      ctx.globalCompositeOperation = "source-over";
-      ctx.font = font;
-      ctx.textBaseline = "alphabetic";
-      ctx.textAlign = "left";
-      ctx.fillStyle = "#000";
-      ctx.fillText(text, 0, baselineY);
+      ctx.globalCompositeOperation = "source-over"
+      ctx.font = font
+      ctx.textBaseline = "alphabetic"
+      ctx.textAlign = "left"
+      ctx.fillStyle = "#000"
+      ctx.fillText(text, 0, baselineY)
 
-      ctx.globalCompositeOperation = "source-in";
-      ctx.fillStyle = bgColor;
-      ctx.fillRect(0, 0, width, height);
+      ctx.globalCompositeOperation = "source-in"
+      ctx.fillStyle = bgColor
+      ctx.fillRect(0, 0, width, height)
 
-      ctx.globalCompositeOperation = "source-atop";
+      ctx.globalCompositeOperation = "source-atop"
       for (let i = 0; i < numLines; i++) {
-        const y = i * lineGap;
+        const y = i * lineGap
 
-        const curve1 = Math.sin(phase) * curveIntensity;
-        const curve2 = Math.sin(phase + 0.5) * curveIntensity * 0.6;
+        const curve1 = Math.sin(phase) * curveIntensity
+        const curve2 = Math.sin(phase + 0.5) * curveIntensity * 0.6
 
-        const colorIndex = i % resolvedColors.length;
-        ctx.strokeStyle = resolvedColors[colorIndex];
-        ctx.lineWidth = lineWidth;
+        const colorIndex = i % resolvedColors.length
+        ctx.strokeStyle = resolvedColors[colorIndex]
+        ctx.lineWidth = lineWidth
 
-        ctx.beginPath();
-        ctx.moveTo(0, y);
+        ctx.beginPath()
+        ctx.moveTo(0, y)
         ctx.bezierCurveTo(
           width * 0.33,
           y + curve1,
           width * 0.66,
           y + curve2,
           width,
-          y,
-        );
-        ctx.stroke();
+          y
+        )
+        ctx.stroke()
       }
 
-      animationRef.current = requestAnimationFrame(animate);
-    };
+      animationRef.current = requestAnimationFrame(animate)
+    }
 
-    animationRef.current = requestAnimationFrame(animate);
+    animationRef.current = requestAnimationFrame(animate)
 
     return () => {
-      cancelAnimationFrame(animationRef.current);
-    };
+      cancelAnimationFrame(animationRef.current)
+    }
   }, [
     text,
     font,
@@ -179,21 +179,21 @@ export function CanvasText({
     lineGap,
     curveIntensity,
     dimensions,
-  ]);
+  ])
 
   return (
     <span
       className={cn(
         "relative inline-block",
         overlay && "absolute inset-0",
-        className,
+        className
       )}
     >
       <span
         ref={bgRef}
         className={cn(
           "pointer-events-none absolute h-0 w-0 opacity-0",
-          backgroundClassName,
+          backgroundClassName
         )}
         aria-hidden="true"
       />
@@ -211,5 +211,5 @@ export function CanvasText({
         role="img"
       />
     </span>
-  );
+  )
 }

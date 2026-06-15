@@ -1,7 +1,6 @@
 import { Manrope, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
-import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" })
@@ -19,7 +18,6 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={cn(
         "antialiased",
         fontMono.variable,
@@ -27,9 +25,7 @@ export default function RootLayout({
         manrope.variable
       )}
     >
-      <body>
-        <ThemeProvider>{children}</ThemeProvider>
-      </body>
+      <body>{children}</body>
     </html>
   )
 }

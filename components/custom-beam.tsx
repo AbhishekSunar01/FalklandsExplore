@@ -16,13 +16,13 @@ export function CustomBeam() {
 
             <p
               className={twMerge(
-                "mb-4 text-3xl leading-10 font-bold text-neutral-800 dark:text-neutral-400"
+                "mb-4 text-3xl leading-10 font-bold text-neutral-800"
               )}
             >
               {item.title}
             </p>
 
-            <div className="prose prose-sm dark:prose-invert text-justify text-sm">
+            <div className="prose prose-sm text-justify text-sm">
               {item?.image && (
                 <img
                   src={item.image}
