@@ -145,7 +145,7 @@ export const StackTestimonials = () => {
               className="h-5 w-5"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path d="M5.5 12.002H19" />
               <path d="M10.9999 18.002C10.9999 18.002 4.99998 13.583 4.99997 12.0019C4.99996 10.4208 11 6.00195 11 6.00195" />
@@ -176,7 +176,7 @@ export const StackTestimonials = () => {
               className="h-5 w-5"
               fill="none"
               stroke="currentColor"
-              stroke-width="2"
+              strokeWidth="2"
             >
               <path d="M18.5 12L4.99997 12" />
               <path d="M13 18C13 18 19 13.5811 19 12C19 10.4188 13 6 13 6" />
