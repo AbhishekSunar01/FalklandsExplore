@@ -14,16 +14,22 @@ export function CustomBeam() {
               {item.badge}
             </h2> */}
 
-            <p className={twMerge("mb-4 text-xl")}>{item.title}</p>
+            <p
+              className={twMerge(
+                "mb-4 text-3xl leading-10 font-bold text-neutral-800 dark:text-neutral-400"
+              )}
+            >
+              {item.title}
+            </p>
 
-            <div className="prose prose-sm dark:prose-invert text-sm">
+            <div className="prose prose-sm dark:prose-invert text-justify text-sm">
               {item?.image && (
                 <img
                   src={item.image}
                   alt="blog thumbnail"
                   height="600"
                   width="600"
-                  className="mb-10 rounded-lg object-cover"
+                  className="mb-4 rounded-lg object-cover"
                 />
               )}
               {item.description}
