@@ -19,7 +19,7 @@ const navItems = [
   },
   {
     name: "Services",
-    link: "#services",
+    link: "/services",
   },
   {
     name: "About",
