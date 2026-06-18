@@ -27,7 +27,7 @@ const navItems = [
   },
   {
     name: "Contact",
-    link: "#contact",
+    link: "contact",
   },
 ]
 
