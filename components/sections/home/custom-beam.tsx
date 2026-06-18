@@ -6,34 +6,100 @@ import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export function CustomBeam() {
   return (
-    <TracingBeam className="px-6">
-      <div className="relative mx-auto max-w-2xl pt-4 antialiased">
+    <TracingBeam className="px-2 md:px-3">
+      <div className="relative mx-auto max-w-360 pt-4 antialiased">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-10">
             {/* <h2 className="mb-4 w-fit rounded-full bg-black px-4 py-1 text-sm text-white">
               {item.badge}
             </h2> */}
+            {index < 2 ? (
+              <div className="grid gap-6 md:grid-cols-[0.88fr_1.12fr] md:items-center">
+                <div className="flex h-full w-full items-center justify-start">
+                  <div>
+                    <p
+                      className={twMerge(
+                        index === 0
+                          ? "mb-6 max-w-2xl text-4xl leading-tight font-semibold text-neutral-900 md:text-5xl"
+                          : "mb-6 max-w-2xl text-3xl leading-tight font-semibold text-neutral-900 md:text-4xl"
+                      )}
+                    >
+                      {item.title}
+                    </p>
 
-            <p
-              className={twMerge(
-                "mb-4 text-3xl leading-10 font-bold text-neutral-800"
-              )}
-            >
-              {item.title}
-            </p>
+                    <div
+                      className={twMerge(
+                        index === 0
+                          ? "prose max-w-2xl text-left text-lg leading-8 text-zinc-700 md:text-xl"
+                          : "prose max-w-2xl text-left text-base leading-7 text-zinc-700 md:text-lg"
+                      )}
+                    >
+                      {item.description}
+                    </div>
 
-            <div className="prose prose-sm text-justify text-sm">
-              {item?.image && (
-                <img
-                  src={item.image}
-                  alt="blog thumbnail"
-                  height="600"
-                  width="600"
-                  className="mb-4 rounded-lg object-cover"
-                />
-              )}
-              {item.description}
-            </div>
+                    <button className="mt-10 inline-flex items-center gap-4 rounded-lg border border-zinc-700 px-10 py-4 text-sm font-semibold tracking-[0.22em] text-blue-700 uppercase transition hover:bg-zinc-100">
+                      CHECK ATTRACTIONS
+                      <span aria-hidden="true" className="text-xl leading-none">
+                        →
+                      </span>
+                    </button>
+                  </div>
+                </div>
+
+                <div className="grid w-full max-w-5xl grid-cols-2 gap-5 md:gap-6">
+                  <div className="h-110 overflow-hidden rounded-lg bg-zinc-100 md:-mt-4">
+                    {item?.image ? (
+                      <img
+                        src={item.image}
+                        alt="East Falkland coastal wildlife"
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-zinc-300 text-sm font-medium tracking-wide text-zinc-500 uppercase">
+                        Image Placeholder
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="h-110 overflow-hidden rounded-lg bg-zinc-100 md:mt-6">
+                    {item?.imageSecondary ? (
+                      <img
+                        src={item.imageSecondary}
+                        alt={`${item.title} secondary view`}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center border border-dashed border-zinc-300 text-sm font-medium tracking-wide text-zinc-500 uppercase">
+                        Image Placeholder
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <>
+                <p
+                  className={twMerge(
+                    "mb-4 text-3xl leading-10 font-bold text-neutral-800"
+                  )}
+                >
+                  {item.title}
+                </p>
+
+                <div className="prose prose-sm text-justify text-sm">
+                  {item?.image && (
+                    <img
+                      src={item.image}
+                      alt="blog thumbnail"
+                      height="600"
+                      width="600"
+                      className="mb-4 rounded-lg object-cover"
+                    />
+                  )}
+                  {item.description}
+                </div>
+              </>
+            )}
           </div>
         ))}
       </div>
@@ -65,6 +131,8 @@ const dummyContent = [
     badge: "React",
     image:
       "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageSecondary:
+      "https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=1200",
   },
   {
     title: "Exploring Stanley — Capital City Car Hire & Tours",
@@ -83,5 +151,7 @@ const dummyContent = [
     badge: "Changelog",
     image:
       "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    imageSecondary:
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=1200",
   },
 ]

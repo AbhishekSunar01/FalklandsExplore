@@ -1,55 +1,55 @@
-"use client";
-import React, { useEffect, useRef, useState } from "react";
+"use client"
+import React, { useEffect, useRef, useState } from "react"
 import {
   motion,
   useTransform,
   useScroll,
   useVelocity,
   useSpring,
-} from "motion/react";
-import { cn } from "@/lib/utils";
+} from "motion/react"
+import { cn } from "@/lib/utils"
 
 export const TracingBeam = ({
   children,
   className,
 }: {
-  children: React.ReactNode;
-  className?: string;
+  children: React.ReactNode
+  className?: string
 }) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
-  });
+  })
 
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [svgHeight, setSvgHeight] = useState(0);
+  const contentRef = useRef<HTMLDivElement>(null)
+  const [svgHeight, setSvgHeight] = useState(0)
 
   useEffect(() => {
     if (contentRef.current) {
-      setSvgHeight(contentRef.current.offsetHeight);
+      setSvgHeight(contentRef.current.offsetHeight)
     }
-  }, []);
+  }, [])
 
   const y1 = useSpring(
     useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
     {
       stiffness: 500,
       damping: 90,
-    },
-  );
+    }
+  )
   const y2 = useSpring(
     useTransform(scrollYProgress, [0, 1], [50, svgHeight - 200]),
     {
       stiffness: 500,
       damping: 90,
-    },
-  );
+    }
+  )
 
   return (
     <motion.div
       ref={ref}
-      className={cn("relative mx-auto h-full w-full max-w-4xl", className)}
+      className={cn("relative mx-auto h-full w-full max-w-none", className)}
     >
       <div className="absolute top-3 -left-4 md:-left-20">
         <motion.div
@@ -63,7 +63,7 @@ export const TracingBeam = ({
                 ? "none"
                 : "rgba(0, 0, 0, 0.24) 0px 3px 8px",
           }}
-          className="border-netural-200 ml-[27px] flex h-4 w-4 items-center justify-center rounded-full border shadow-sm"
+          className="border-netural-200 ml-6.75 flex h-4 w-4 items-center justify-center rounded-full border shadow-sm"
         >
           <motion.div
             transition={{
@@ -122,5 +122,5 @@ export const TracingBeam = ({
       </div>
       <div ref={contentRef}>{children}</div>
     </motion.div>
-  );
-};
+  )
+}
