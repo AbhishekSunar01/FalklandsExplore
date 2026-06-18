@@ -2,19 +2,25 @@ import React from "react"
 
 export function OurStory() {
   return (
-    <section className="w-full bg-white px-4 py-16 text-zinc-900 sm:px-6 md:py-20 lg:px-8">
+    <section
+      aria-labelledby="our-story-heading"
+      className="w-full bg-white px-4 py-16 text-zinc-900 sm:px-6 md:py-20 lg:px-8"
+    >
       <div className="mx-auto max-w-7xl">
         <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-blue-700 uppercase">
           Our Story
         </p>
 
-        <h2 className="mb-6 text-3xl leading-tight font-bold tracking-tight md:text-5xl">
+        <h2
+          id="our-story-heading"
+          className="mb-6 text-3xl leading-tight font-bold tracking-tight md:text-5xl"
+        >
           Trusted Car Hire & Tours in the Falkland Islands
         </h2>
 
         <div className="space-y-5 text-base leading-8 text-zinc-700 md:text-lg">
           <p>
-            At KE Drive & Discover, we make getting around the Falkland Islands
+            At Falklands Explore, we make getting around the Falkland Islands
             simple. Whether you need a reliable hire car for a week-long
             holiday, a 4x4 for a self-drive adventure to Volunteer Point, or a
             guided tour tailored to your interests - we have the local knowledge

@@ -22,12 +22,12 @@ const navItems = [
     link: "#services",
   },
   {
-    name: "Contact",
-    link: "#contact",
-  },
-  {
     name: "About",
     link: "#about",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
   },
 ]
 
@@ -41,7 +41,9 @@ export function NavbarComponent() {
         <NavbarLogo />
         <NavItems items={navItems} />
         <div className="flex items-center gap-4">
-          <NavbarButton variant="primary">Book a call</NavbarButton>
+          <NavbarButton href="tel:+50065338" variant="primary">
+            Book Now
+          </NavbarButton>
         </div>
       </NavBody>
 
@@ -72,10 +74,11 @@ export function NavbarComponent() {
           <div className="flex w-full flex-col gap-4">
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
+              href="tel:+50065338"
               variant="primary"
               className="w-full"
             >
-              Book a call
+              Book Now
             </NavbarButton>
           </div>
         </MobileNavMenu>

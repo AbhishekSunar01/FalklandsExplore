@@ -232,12 +232,13 @@ export const MobileNavToggle = ({
 export const NavbarLogo = () => {
   return (
     <a
-      href="#"
+      href="/"
+      aria-label="Falklands Explore — home"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-white"
     >
       <img
         src="https://assets.aceternity.com/logo.png"
-        alt="logo"
+        alt="Falklands Explore logo"
         width={30}
         height={30}
       />

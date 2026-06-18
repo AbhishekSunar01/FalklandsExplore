@@ -18,31 +18,27 @@ export function CustomBeam() {
                 <div className="flex h-full w-full items-center justify-start">
                   <div>
                     <p
-                      className={twMerge(
-                        index === 0
-                          ? "mb-6 max-w-2xl text-4xl leading-tight font-semibold text-neutral-900 md:text-5xl"
-                          : "mb-6 max-w-2xl text-3xl leading-tight font-semibold text-neutral-900 md:text-4xl"
-                      )}
+                      className="mb-6 max-w-2xl text-3xl leading-tight font-semibold text-neutral-900 md:text-4xl"
                     >
-                      {item.title}
+                      <span role="heading" aria-level={index === 0 ? 2 : 3}>
+                        {item.title}
+                      </span>
                     </p>
 
-                    <div
-                      className={twMerge(
-                        index === 0
-                          ? "prose max-w-2xl text-left text-lg leading-8 text-zinc-700 md:text-xl"
-                          : "prose max-w-2xl text-left text-base leading-7 text-zinc-700 md:text-lg"
-                      )}
-                    >
+                    <div className="prose max-w-2xl text-left text-base leading-7 text-zinc-700 md:text-lg">
                       {item.description}
                     </div>
 
-                    <button className="mt-10 inline-flex items-center gap-4 rounded-lg border border-zinc-700 px-10 py-4 text-sm font-semibold tracking-[0.22em] text-blue-700 uppercase transition hover:bg-zinc-100">
+                    <a
+                      href="/attractions"
+                      className="mt-10 inline-flex items-center gap-4 rounded-lg border border-zinc-700 px-10 py-4 text-sm font-semibold tracking-[0.22em] text-blue-700 uppercase transition hover:bg-zinc-100"
+                      aria-label="Explore Falkland Islands attractions"
+                    >
                       CHECK ATTRACTIONS
                       <span aria-hidden="true" className="text-xl leading-none">
                         →
                       </span>
-                    </button>
+                    </a>
                   </div>
                 </div>
 
@@ -51,7 +47,7 @@ export function CustomBeam() {
                     {item?.image ? (
                       <img
                         src={item.image}
-                        alt="East Falkland coastal wildlife"
+                        alt={item.imageAlt ?? item.title}
                         className="h-full w-full object-cover"
                       />
                     ) : (
@@ -65,7 +61,7 @@ export function CustomBeam() {
                     {item?.imageSecondary ? (
                       <img
                         src={item.imageSecondary}
-                        alt={`${item.title} secondary view`}
+                        alt={item.imageSecondaryAlt ?? `${item.title} — secondary view`}
                         className="h-full w-full object-cover"
                       />
                     ) : (
@@ -106,10 +102,12 @@ export function CustomBeam() {
 const dummyContent = [
   {
     title: "East Falkland Day Trips — Wildlife & History Beyond Stanley",
+    imageAlt: "Penguins and wildlife at Volunteer Point, East Falkland Islands",
+    imageSecondaryAlt: "4x4 vehicle on rural tracks in East Falkland",
     description: (
       <>
         <p>
-          Venture beyond StaVenture beyond Stanley into the wild, open
+          Venture beyond Stanley into the wild, open
           landscapes of East Falkland.
         </p>
         <p>
@@ -132,6 +130,8 @@ const dummyContent = [
   },
   {
     title: "Exploring Stanley — Capital City Car Hire & Tours",
+    imageAlt: "Stanley harbour and waterfront, Falkland Islands capital",
+    imageSecondaryAlt: "Gypsy Cove Magellanic penguins near Stanley, Falkland Islands",
     description: (
       <>
         <p>
@@ -141,7 +141,7 @@ const dummyContent = [
           beach, or join one of our guided Stanley tours for local history and
           cultural insight included.
         </p>
-        <p></p>
+
       </>
     ),
     badge: "Changelog",

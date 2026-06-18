@@ -7,34 +7,34 @@ import { Button } from "@/components/ui/button"
 const testimonials = [
   {
     id: 1,
-    name: "Alex Rivera",
-    role: "Product Lead @ Linear",
+    name: "David Clayton",
+    role: "Visitor, East Falkland Tour",
     quote:
-      "Finding a system that balances aesthetic purity with functional robustness is rare. This library is the first one I've truly enjoyed using in production.",
+      "We booked a personal Falklands East island tour including Port Stanley in a 4\u00d74 vehicle. Our guide was very friendly and knowledgeable — he took us to see the wildlife including penguins and the war memorials. It was a wonderful experience and I would highly recommend using this tour operator.",
     rating: 5,
   },
   {
     id: 2,
-    name: "Sarah Chen",
-    role: "Design Director @ Stripe",
+    name: "Joanne Drost",
+    role: "Holiday Visitor",
     quote:
-      "The attention to detail is remarkable. Every interaction feels intentional and polished. It's raised the bar for our entire design system.",
+      "From start to finish, very pleasant communication. Our guide did everything in his power to make my time on the island unforgettable. Even when I asked for an extra last-minute tour, he went all out to arrange it for me.",
     rating: 5,
   },
   {
     id: 3,
-    name: "Marcus Johnson",
-    role: "Engineering Manager @ Figma",
+    name: "Julie Robinson",
+    role: "Self-Drive Car Hire Guest",
     quote:
-      "Performance meets elegance. We've integrated this across our platform and the developer experience has been phenomenal.",
+      "Booking a car was quick and easy, and it gave us the freedom to go at our own pace. The team was super helpful and even gave us local tips for must-see spots!",
     rating: 5,
   },
   {
     id: 4,
-    name: "Emma Williams",
-    role: "CTO @ Notion",
+    name: "Morgan Jonathan",
+    role: "Guided Wildlife Tour Guest",
     quote:
-      "This is what modern UI libraries should aspire to be. Clean, powerful, and delightful to work with every single day.",
+      "We joined a guided tour and learned so much about the wildlife and history. The guide was friendly, informative, and made the whole trip unforgettable.",
     rating: 5,
   },
 ]
@@ -57,11 +57,11 @@ export const StackTestimonials = () => {
       <div className="mx-auto max-w-4xl">
         <article>
           <h2 className="mb-4 text-5xl font-bold tracking-tight text-zinc-700">
-            Customer Stories
+            What Our Guests Say
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-zinc-600">
-            Hear from industry leaders who have transformed their products with
-            our design system
+            Real experiences from visitors who explored the Falkland Islands
+            with us
           </p>
         </article>
         <div className="relative flex h-110 items-center justify-center">
