@@ -2,7 +2,7 @@
 import React from "react"
 
 import { twMerge } from "tailwind-merge"
-import { TracingBeam } from "./ui/tracing-beam"
+import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export function CustomBeam() {
   return (
