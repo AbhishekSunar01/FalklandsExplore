@@ -110,7 +110,7 @@ export default function Home() {
         {/* Hero Background */}
         <div
           className="absolute inset-x-0 top-0 h-screen w-full bg-cover bg-center bg-no-repeat md:h-[90vh]"
-          style={{ backgroundImage: "url('/images/hero.jpg')" }}
+          style={{ backgroundImage: "url('/images/contact.jpg')" }}
           role="img"
           aria-label="Aerial view of the Falkland Islands coastline"
         >

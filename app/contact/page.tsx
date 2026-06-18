@@ -38,7 +38,7 @@ export default function ContactPage() {
       {/* Page header — contact.jpg background keeps navbar white text legible */}
       <div
         className="relative bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/contact.jpg')" }}
+        style={{ backgroundImage: "url('/images/hero.jpg')" }}
       >
         <div className="absolute inset-0 bg-linear-to-b from-black/55 via-black/45 to-black/65" />
         <div className="relative z-10">
