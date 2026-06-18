@@ -7,7 +7,7 @@ export function OurStory() {
       className="w-full bg-white px-4 py-16 text-zinc-900 sm:px-6 md:py-20 lg:px-8"
     >
       <div className="mx-auto max-w-7xl">
-        <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-blue-700 uppercase">
+        <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-emerald-700 uppercase">
           Our Story
         </p>
 

@@ -44,7 +44,7 @@ export default function ContactPage() {
         <div className="relative z-10">
           <NavbarComponent />
           <div className="px-4 pt-36 pb-16 text-center sm:px-6 lg:px-8">
-            <p className="mb-3 text-sm font-bold tracking-[0.2em] text-blue-400 uppercase">
+            <p className="mb-3 text-sm font-bold tracking-[0.2em] text-emerald-400 uppercase">
               Get in Touch
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl">
@@ -83,16 +83,16 @@ export default function ContactPage() {
                     rel={
                       label === "Address" ? "noopener noreferrer" : undefined
                     }
-                    className="group flex items-start gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition hover:border-blue-200 hover:bg-blue-50"
+                    className="group flex items-start gap-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 transition hover:border-emerald-200 hover:bg-emerald-50"
                   >
-                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white">
+                    <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-emerald-700 text-white">
                       <Icon size={20} aria-hidden="true" />
                     </div>
                     <div>
                       <p className="mb-1 text-xs font-semibold tracking-widest text-zinc-400 uppercase">
                         {label}
                       </p>
-                      <p className="text-base font-medium text-zinc-800 group-hover:text-blue-700">
+                      <p className="text-base font-medium text-zinc-800 group-hover:text-emerald-700">
                         {value}
                       </p>
                     </div>

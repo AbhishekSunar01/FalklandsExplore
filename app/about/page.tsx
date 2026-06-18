@@ -72,7 +72,7 @@ export default function AboutPage() {
         <div className="relative z-10">
           <NavbarComponent />
           <div className="px-4 pt-36 pb-20 text-center sm:px-6 lg:px-8">
-            <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-blue-400 uppercase">
+            <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-emerald-400 uppercase">
               Your Guide
             </p>
             <h1 className="text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-6xl">
@@ -107,7 +107,7 @@ export default function AboutPage() {
 
             {/* Story */}
             <div>
-              <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase">
+              <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-emerald-600 uppercase">
                 My Story
               </p>
               <h2 className="mb-6 text-3xl font-bold tracking-tight text-zinc-900 md:text-4xl">
@@ -137,7 +137,7 @@ export default function AboutPage() {
               </div>
               <a
                 href="/contact"
-                className="mt-8 inline-flex items-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-blue-700"
+                className="mt-8 inline-flex items-center rounded-full bg-emerald-700 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-800"
               >
                 Get in Touch
               </a>
@@ -170,7 +170,7 @@ export default function AboutPage() {
         className="bg-zinc-50 px-4 py-16 sm:px-6 md:py-20 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase">
+          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-emerald-600 uppercase">
             Why Choose Kamal
           </p>
           <h2
@@ -185,7 +185,7 @@ export default function AboutPage() {
                 key={title}
                 className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm"
               >
-                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-blue-600 text-white">
+                <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-emerald-700 text-white">
                   <Icon size={22} aria-hidden="true" />
                 </div>
                 <h3 className="mb-2 text-lg font-bold text-zinc-900">
@@ -204,7 +204,7 @@ export default function AboutPage() {
         className="bg-white px-4 py-16 sm:px-6 md:py-20 lg:px-8"
       >
         <div className="mx-auto max-w-7xl">
-          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-blue-600 uppercase">
+          <p className="mb-3 text-sm font-semibold tracking-[0.2em] text-emerald-600 uppercase">
             Guest Reviews
           </p>
           <h2
@@ -260,7 +260,7 @@ export default function AboutPage() {
           <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
             <a
               href="tel:+50065338"
-              className="inline-flex items-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-blue-700"
+              className="inline-flex items-center rounded-full bg-emerald-700 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-800"
             >
               Call +500 65338
             </a>

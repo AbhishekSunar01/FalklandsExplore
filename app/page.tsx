@@ -157,18 +157,18 @@ export default function Home() {
                 Falkland Islands Car Hire &{" "}
                 <CanvasText
                   text="Tour Services"
-                  backgroundClassName="bg-blue-600"
+                  backgroundClassName="bg-emerald-700"
                   colors={[
-                    "rgba(0, 153, 255, 1)",
-                    "rgba(0, 153, 255, 0.9)",
-                    "rgba(0, 153, 255, 0.8)",
-                    "rgba(0, 153, 255, 0.7)",
-                    "rgba(0, 153, 255, 0.6)",
-                    "rgba(0, 153, 255, 0.5)",
-                    "rgba(0, 153, 255, 0.4)",
-                    "rgba(0, 153, 255, 0.3)",
-                    "rgba(0, 153, 255, 0.2)",
-                    "rgba(0, 153, 255, 0.1)",
+                    "rgba(15, 110, 86, 1)",
+                    "rgba(15, 110, 86, 0.9)",
+                    "rgba(15, 110, 86, 0.8)",
+                    "rgba(15, 110, 86, 0.7)",
+                    "rgba(15, 110, 86, 0.6)",
+                    "rgba(15, 110, 86, 0.5)",
+                    "rgba(15, 110, 86, 0.4)",
+                    "rgba(15, 110, 86, 0.3)",
+                    "rgba(15, 110, 86, 0.2)",
+                    "rgba(15, 110, 86, 0.1)",
                   ]}
                   lineGap={4}
                   animationDuration={20}
@@ -201,7 +201,7 @@ export default function Home() {
                   </p>
                   <a
                     href="/services"
-                    className="inline-flex text-sm font-semibold text-blue-700 underline-offset-4 hover:underline"
+                    className="inline-flex text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline"
                     aria-label="Learn more about Falkland Islands self-drive car hire"
                   >
                     Learn More
@@ -224,7 +224,7 @@ export default function Home() {
                   </p>
                   <a
                     href="/services"
-                    className="inline-flex text-sm font-semibold text-blue-700 underline-offset-4 hover:underline"
+                    className="inline-flex text-sm font-semibold text-emerald-700 underline-offset-4 hover:underline"
                     aria-label="Learn more about guided tours in the Falkland Islands"
                   >
                     Learn More

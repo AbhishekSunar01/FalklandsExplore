@@ -25,7 +25,7 @@ export function BookingCta() {
 
         <a
           href="tel:+50065338"
-          className="inline-flex items-center rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-blue-700"
+          className="inline-flex items-center rounded-full bg-emerald-700 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-800"
         >
           BOOK YOUR ADVENTURE NOW
         </a>

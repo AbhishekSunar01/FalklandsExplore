@@ -6,7 +6,7 @@ import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export function CustomBeam() {
   return (
-    <TracingBeam className="px-4 py-16 sm:px-6 lg:px-8 md:py-20">
+    <TracingBeam className="px-4 py-16 sm:px-6 md:py-20 lg:px-8">
       <div className="relative mx-auto max-w-7xl antialiased">
         {dummyContent.map((item, index) => (
           <div key={`content-${index}`} className="mb-16 last:mb-0 md:mb-20">
@@ -14,12 +14,10 @@ export function CustomBeam() {
               {item.badge}
             </h2> */}
             {index < 2 ? (
-              <div className="grid gap-8 lg:gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+              <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr] md:items-center lg:gap-10">
                 <div className="flex h-full w-full items-center justify-start">
                   <div>
-                    <p
-                      className="mb-6 max-w-2xl text-3xl leading-tight font-semibold text-neutral-900 md:text-4xl"
-                    >
+                    <p className="mb-6 max-w-2xl text-3xl leading-tight font-semibold text-neutral-900 md:text-4xl">
                       <span role="heading" aria-level={index === 0 ? 2 : 3}>
                         {item.title}
                       </span>
@@ -31,7 +29,7 @@ export function CustomBeam() {
 
                     <a
                       href="/attractions"
-                      className="mt-10 inline-flex items-center gap-4 rounded-lg border border-zinc-700 px-10 py-4 text-sm font-semibold tracking-[0.22em] text-blue-700 uppercase transition hover:bg-zinc-100"
+                      className="mt-10 inline-flex items-center gap-4 rounded-lg border border-zinc-700 px-10 py-4 text-sm font-semibold tracking-[0.22em] text-emerald-700 uppercase transition hover:bg-zinc-100"
                       aria-label="Explore Falkland Islands attractions"
                     >
                       CHECK ATTRACTIONS
@@ -61,7 +59,10 @@ export function CustomBeam() {
                     {item?.imageSecondary ? (
                       <img
                         src={item.imageSecondary}
-                        alt={item.imageSecondaryAlt ?? `${item.title} — secondary view`}
+                        alt={
+                          item.imageSecondaryAlt ??
+                          `${item.title} — secondary view`
+                        }
                         className="h-full w-full object-cover"
                       />
                     ) : (
@@ -74,7 +75,11 @@ export function CustomBeam() {
               </div>
             ) : (
               <>
-                <p className={twMerge("mb-4 text-3xl leading-10 font-bold text-neutral-800")}>
+                <p
+                  className={twMerge(
+                    "mb-4 text-3xl leading-10 font-bold text-neutral-800"
+                  )}
+                >
                   {item.title}
                 </p>
 
@@ -107,8 +112,8 @@ const dummyContent = [
     description: (
       <>
         <p>
-          Venture beyond Stanley into the wild, open
-          landscapes of East Falkland.
+          Venture beyond Stanley into the wild, open landscapes of East
+          Falkland.
         </p>
         <p>
           Our self-drive hire vehicles are fully equipped for rural tracks,
@@ -131,7 +136,8 @@ const dummyContent = [
   {
     title: "Exploring Stanley — Capital City Car Hire & Tours",
     imageAlt: "Stanley harbour and waterfront, Falkland Islands capital",
-    imageSecondaryAlt: "Gypsy Cove Magellanic penguins near Stanley, Falkland Islands",
+    imageSecondaryAlt:
+      "Gypsy Cove Magellanic penguins near Stanley, Falkland Islands",
     description: (
       <>
         <p>
@@ -141,7 +147,6 @@ const dummyContent = [
           beach, or join one of our guided Stanley tours for local history and
           cultural insight included.
         </p>
-
       </>
     ),
     badge: "Changelog",
