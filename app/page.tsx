@@ -19,7 +19,7 @@ export default function Home() {
         }}
       >
         {/* Gradient Overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/40 via-black/30 to-black/60" />
       </div>
 
       {/* Content */}
@@ -27,8 +27,8 @@ export default function Home() {
         <NavbarComponent />
 
         {/* Hero Section */}
-        <section className="flex h-screen items-center justify-center px-6 text-center md:h-[90vh]">
-          <div className="max-w-2xl">
+        <section className="flex h-screen items-center justify-center px-4 text-center sm:px-6 md:h-[90vh] lg:px-8">
+          <div className="mx-auto max-w-3xl">
             <h1
               className="mb-6 text-4xl leading-20 font-bold text-white drop-shadow-lg md:text-6xl"
               // style={{
@@ -53,11 +53,11 @@ export default function Home() {
 
         <CustomBeam />
 
-        <section className="px-6 py-14 md:py-18">
-          <div className="mx-auto max-w-6xl">
+        <section className="px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+          <div className="mx-auto max-w-7xl">
             <h2
               className={cn(
-                "group relative mt-4 mb-6 max-w-4xl text-left text-4xl leading-20 font-bold tracking-tight text-balance text-neutral-600 sm:text-5xl md:text-6xl xl:text-7xl"
+                "group relative mb-6 max-w-5xl text-left text-4xl leading-20 font-bold tracking-tight text-balance text-neutral-600 sm:text-5xl md:text-6xl xl:text-7xl"
               )}
             >
               Falkland Islands Car Hire &{" "}
@@ -81,7 +81,7 @@ export default function Home() {
               />
             </h2>
 
-            <p className="mb-10 max-w-4xl text-left text-base leading-8 text-zinc-700 md:text-lg">
+            <p className="mb-12 max-w-4xl text-left text-base leading-8 text-zinc-700 md:text-lg">
               From scenic drives through East Falkland to guided tours of iconic
               sites like Volunteer Point and Gypsy Cove, KeDrive & Discover
               offers personalized travel solutions for every kind of explorer.
@@ -89,8 +89,8 @@ export default function Home() {
               the right vehicle and itinerary waiting for you.
             </p>
 
-            <div className="grid gap-6 md:grid-cols-2">
-              <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+            <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
+              <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm md:p-8">
                 <div className="mb-5 flex h-44 items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-100 text-sm font-medium tracking-wide text-zinc-500 uppercase">
                   Image Placeholder
                 </div>
@@ -115,7 +115,7 @@ export default function Home() {
                 </a>
               </article>
 
-              <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm">
+              <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm md:p-8">
                 <div className="mb-5 flex h-44 items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-100 text-sm font-medium tracking-wide text-zinc-500 uppercase">
                   Image Placeholder
                 </div>

@@ -53,8 +53,8 @@ export const StackTestimonials = () => {
   }
 
   return (
-    <section className="font-manrope relative w-full bg-linear-to-br from-zinc-50 to-white px-6 py-16">
-      <div className="mx-auto max-w-2xl">
+    <section className="font-manrope relative w-full bg-linear-to-br from-zinc-50 to-white px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+      <div className="mx-auto max-w-4xl">
         <article>
           <h2 className="mb-4 text-5xl font-bold tracking-tight text-zinc-700">
             Customer Stories
@@ -134,7 +134,7 @@ export const StackTestimonials = () => {
         </div>
 
         {/* Navigation Controls */}
-        <div className="mt-8 flex items-center justify-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
           <Button
             onClick={handlePrevious}
             className="flex items-center gap-0 rounded-full bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-800"

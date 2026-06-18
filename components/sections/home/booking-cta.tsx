@@ -2,7 +2,7 @@ import React from "react"
 
 export function BookingCta() {
   return (
-    <section className="relative w-full overflow-hidden px-6 py-16 text-white md:py-24">
+    <section className="relative w-full overflow-hidden px-4 py-16 text-white sm:px-6 md:py-20 lg:px-8">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
@@ -14,7 +14,7 @@ export function BookingCta() {
       {/* Card background styles paused for now:
           border border-white/20 bg-black/20 bg-black/45 shadow-lg backdrop-blur-[2px]
       */}
-      <div className="relative z-10 mx-auto max-w-4xl p-8 text-center md:p-12">
+      <div className="relative z-10 mx-auto max-w-5xl p-6 text-center sm:p-8 md:p-10">
         <h2 className="mb-4 text-3xl font-bold tracking-tight drop-shadow-md md:text-4xl">
           Book Your Falkland Islands Car Hire Today
         </h2>

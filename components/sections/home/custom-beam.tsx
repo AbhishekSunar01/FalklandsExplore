@@ -6,15 +6,15 @@ import { TracingBeam } from "@/components/ui/tracing-beam"
 
 export function CustomBeam() {
   return (
-    <TracingBeam className="px-2 md:px-3">
-      <div className="relative mx-auto max-w-360 pt-4 antialiased">
+    <TracingBeam className="px-4 py-16 sm:px-6 lg:px-8 md:py-20">
+      <div className="relative mx-auto max-w-7xl antialiased">
         {dummyContent.map((item, index) => (
-          <div key={`content-${index}`} className="mb-10">
+          <div key={`content-${index}`} className="mb-16 last:mb-0 md:mb-20">
             {/* <h2 className="mb-4 w-fit rounded-full bg-black px-4 py-1 text-sm text-white">
               {item.badge}
             </h2> */}
             {index < 2 ? (
-              <div className="grid gap-6 md:grid-cols-[0.88fr_1.12fr] md:items-center">
+              <div className="grid gap-8 lg:gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-center">
                 <div className="flex h-full w-full items-center justify-start">
                   <div>
                     <p
@@ -46,7 +46,7 @@ export function CustomBeam() {
                   </div>
                 </div>
 
-                <div className="grid w-full max-w-5xl grid-cols-2 gap-5 md:gap-6">
+                <div className="grid w-full max-w-5xl grid-cols-2 gap-4 sm:gap-5 md:gap-6">
                   <div className="h-110 overflow-hidden rounded-lg bg-zinc-100 md:-mt-4">
                     {item?.image ? (
                       <img
@@ -78,15 +78,11 @@ export function CustomBeam() {
               </div>
             ) : (
               <>
-                <p
-                  className={twMerge(
-                    "mb-4 text-3xl leading-10 font-bold text-neutral-800"
-                  )}
-                >
+                <p className={twMerge("mb-4 text-3xl leading-10 font-bold text-neutral-800")}>
                   {item.title}
                 </p>
 
-                <div className="prose prose-sm text-justify text-sm">
+                <div className="prose prose-sm max-w-3xl text-justify text-sm md:text-base">
                   {item?.image && (
                     <img
                       src={item.image}

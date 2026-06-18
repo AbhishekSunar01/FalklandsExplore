@@ -2,8 +2,8 @@ import React from "react"
 
 export function OurStory() {
   return (
-    <section className="w-full bg-white px-6 py-16 text-zinc-900 md:py-20">
-      <div className="mx-auto max-w-5xl">
+    <section className="w-full bg-white px-4 py-16 text-zinc-900 sm:px-6 md:py-20 lg:px-8">
+      <div className="mx-auto max-w-7xl">
         <p className="mb-4 text-sm font-semibold tracking-[0.2em] text-blue-700 uppercase">
           Our Story
         </p>
@@ -27,7 +27,7 @@ export function OurStory() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-10 md:grid-cols-2">
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:gap-8">
           <article className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
             <h3 className="mb-4 text-2xl font-bold tracking-tight text-zinc-900">
               Our Vision
