@@ -116,7 +116,7 @@ export const StackTestimonials = () => {
                   </div>
 
                   <p className="mb-10 text-xl leading-relaxed text-zinc-700 italic">
-                    "{testimonial.quote}"
+                    &ldquo;{testimonial.quote}&rdquo;
                   </p>
 
                   <div className="flex items-center justify-between border-t border-zinc-100 pt-6">
