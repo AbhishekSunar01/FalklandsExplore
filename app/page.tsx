@@ -134,8 +134,8 @@ export default function Home() {
                 Discover the best of the Falkland Islands with expert local
                 guides, reliable 4×4 vehicle hire, and personalised tours from
                 Stanley. From wildlife encounters and penguin colonies to
-                historic battlefields and remote coastal landscapes, we'll help
-                you experience the islands your way.
+                historic battlefields and remote coastal landscapes, we&rsquo;ll
+                help you experience the islands your way.
               </p>
             </div>
           </section>
