@@ -128,12 +128,14 @@ export default function Home() {
           >
             <div className="mx-auto max-w-3xl">
               <h1 className="mb-6 text-4xl leading-20 font-bold text-white drop-shadow-lg md:text-6xl">
-                Falkland Islands Car Hire — Explore at Your Own Pace
+                Falkland Islands Tours, Car Hire & Guided Adventures
               </h1>
               <p className="mb-8 text-lg font-medium text-white/95 drop-shadow-md md:text-lg">
-                Hire a 4×4 or standard vehicle from Stanley and discover the
-                Falkland Islands on your own terms. Short-term holiday hire,
-                long-term contracts, and guided tours also available.
+                Discover the best of the Falkland Islands with expert local
+                guides, reliable 4×4 vehicle hire, and personalised tours from
+                Stanley. From wildlife encounters and penguin colonies to
+                historic battlefields and remote coastal landscapes, we&rsquo;ll
+                help you experience the islands your way.
               </p>
             </div>
           </section>
