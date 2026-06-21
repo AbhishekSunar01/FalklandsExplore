@@ -3,6 +3,7 @@ import { Manrope, Geist_Mono } from "next/font/google"
 
 import "./globals.css"
 import { cn } from "@/lib/utils"
+import { WhatsAppFloatingButton } from "@/components/ui/whatsapp-floating-button"
 
 const manrope = Manrope({ subsets: ["latin"], variable: "--font-sans" })
 
@@ -99,7 +100,10 @@ export default function RootLayout({
         manrope.variable
       )}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppFloatingButton />
+      </body>
     </html>
   )
 }
