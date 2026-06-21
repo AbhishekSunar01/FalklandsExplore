@@ -243,6 +243,72 @@ export default function Home() {
             <BookingCta />
           </div>
           <StackTestimonials />
+
+          <section className="mx-auto max-w-3xl py-16">
+            <h2 className="text-3xl font-bold">Leave a Message</h2>
+
+            <p className="mt-3 text-muted-foreground">
+              Have a question about our Falkland Islands tours or vehicle hire
+              services? Send us a message and we'll get back to you as soon as
+              possible.
+            </p>
+
+            <form className="mt-8 space-y-6">
+              <div>
+                <label className="mb-2 block font-medium">
+                  Message <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  rows={6}
+                  className="w-full rounded-lg border p-3"
+                  required
+                />
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+                <div>
+                  <label className="mb-2 block font-medium">
+                    Full Name <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="w-full rounded-lg border p-3"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block font-medium">
+                    Email Address <span className="text-red-500">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    className="w-full rounded-lg border p-3"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="mb-2 block font-medium">Phone Number</label>
+                <input type="tel" className="w-full rounded-lg border p-3" />
+              </div>
+
+              <label className="flex items-center gap-2">
+                <input type="checkbox" />
+                <span className="text-sm">
+                  Save my details for future enquiries.
+                </span>
+              </label>
+
+              <button
+                type="submit"
+                className="rounded-lg bg-emerald-700 px-6 py-3 font-medium text-white"
+              >
+                Send Enquiry
+              </button>
+            </form>
+          </section>
         </div>
         <Footer />
       </div>
