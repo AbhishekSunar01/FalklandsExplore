@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/footer"
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Falklands Explore to book car hire or guided tours in the Falkland Islands. Call +500 65338 or email bookings@falklandsexplore.com. Based at 7 Pale Maiden Crescent, Stanley.",
+    "Get in touch with Falklands Explore to book car hire or guided tours in the Falkland Islands. Call +500 56023 or email bookings@falklandsexplore.com. Based at 7 Pale Maiden Crescent, Stanley.",
   alternates: { canonical: "https://falklandsexplore.com/contact" },
 }
 
@@ -21,8 +21,8 @@ const contactDetails = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+500 65338",
-    href: "tel:+50065338",
+    value: "+500 56023",
+    href: "tel:+50056023",
   },
   {
     icon: MapPin,

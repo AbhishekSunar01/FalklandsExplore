@@ -14,10 +14,20 @@ import { useState } from "react"
 
 const navItems = [
   {
-    name: "Attractions",
-    link: "#attractions",
-  },
-  {
+    //   name: "Attractions",
+    //   link: "#",
+    //   dropdown: [
+    //     {
+    //       name: "Within Stanley",
+    //       link: "/attractions/within-stanley",
+    //     },
+    //     {
+    //       name: "Outside Stanley",
+    //       link: "/attractions/outside-stanley",
+    //     },
+    //   ],
+    // },
+    // {
     name: "Services",
     link: "/services",
   },

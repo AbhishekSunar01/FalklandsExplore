@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Script from "next/script"
+import Image from "next/image"
 
 import { BookingCta } from "@/components/sections/home/booking-cta"
 import { CustomBeam } from "@/components/sections/home/custom-beam"
@@ -9,6 +10,9 @@ import { Footer } from "@/components/layout/footer"
 import { NavbarComponent } from "@/components/layout/navbar"
 import { CanvasText } from "@/components/ui/canvas-text"
 import { cn } from "@/lib/utils"
+
+import cape from "../public/images/road.jpg"
+import vijay from "../public/images/vijay.jpg"
 
 export const metadata: Metadata = {
   title: "Falkland Islands Car Hire & Guided Tours",
@@ -189,7 +193,13 @@ export default function Home() {
               <div className="grid gap-6 md:grid-cols-2 lg:gap-8">
                 <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex h-44 items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-100 text-sm font-medium tracking-wide text-zinc-500 uppercase">
-                    Image Placeholder
+                    <Image
+                      src={cape.src}
+                      alt="Cape Pembroke Lighthouse"
+                      className="h-full w-full overflow-hidden rounded-xl object-cover"
+                      width={400}
+                      height={200}
+                    />
                   </div>
                   <h3 className="mb-4 text-2xl font-bold tracking-tight text-zinc-900">
                     Self-Drive Car Hire in the Falkland Islands
@@ -212,7 +222,13 @@ export default function Home() {
 
                 <article className="rounded-2xl border border-zinc-200 bg-white p-6 shadow-sm md:p-8">
                   <div className="mb-5 flex h-44 items-center justify-center rounded-xl border border-dashed border-zinc-300 bg-zinc-100 text-sm font-medium tracking-wide text-zinc-500 uppercase">
-                    Image Placeholder
+                    <Image
+                      src={vijay.src}
+                      alt="Volunteer Point King Penguin Colony"
+                      className="h-full w-full overflow-hidden rounded-xl object-cover"
+                      width={400}
+                      height={200}
+                    />
                   </div>
                   <h3 className="mb-4 text-2xl font-bold tracking-tight text-zinc-900">
                     Guided Tours of the Falkland Islands
