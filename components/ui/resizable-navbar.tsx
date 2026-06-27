@@ -11,6 +11,21 @@ import Link from "next/link"
 
 import React, { useRef, useState } from "react"
 
+type NavItem = {
+  name: string
+  link: string
+  dropdown?: {
+    name: string
+    link: string
+  }[]
+}
+
+interface NavItemsProps {
+  items: NavItem[]
+  className?: string
+  onItemClick?: () => void
+}
+
 interface NavbarProps {
   children: React.ReactNode
   className?: string
@@ -23,10 +38,7 @@ interface NavBodyProps {
 }
 
 interface NavItemsProps {
-  items: {
-    name: string
-    link: string
-  }[]
+  items: NavItem[]
   className?: string
   onItemClick?: () => void
 }
@@ -124,7 +136,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         className
       )}
     >
-      {items.map((item, idx) => (
+      {/* {items.map((item, idx) => (
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
@@ -140,6 +152,41 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
           )}
           <span className="relative z-20">{item.name}</span>
         </a>
+      ))} */}
+      {items.map((item, idx) => (
+        <div
+          key={`link-${idx}`}
+          className="group relative"
+          onMouseEnter={() => setHovered(idx)}
+        >
+          <a
+            href={item.link}
+            onClick={onItemClick}
+            className="relative px-4 py-2 font-semibold text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.45)]"
+          >
+            {hovered === idx && (
+              <motion.div
+                layoutId="hovered"
+                className="absolute inset-0 h-full w-full rounded-full bg-neutral-800"
+              />
+            )}
+            <span className="relative z-20">{item.name}</span>
+          </a>
+
+          {item.dropdown && (
+            <div className="invisible absolute top-full left-1/2 z-50 mt-2 min-w-[200px] -translate-x-1/2 rounded-lg bg-white py-2 opacity-0 shadow-lg transition-all duration-200 group-hover:visible group-hover:opacity-100">
+              {item.dropdown.map((subItem) => (
+                <Link
+                  key={subItem.link}
+                  href={subItem.link}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-emerald-700"
+                >
+                  {subItem.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
       ))}
     </motion.div>
   )

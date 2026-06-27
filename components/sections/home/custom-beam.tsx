@@ -1,5 +1,8 @@
 "use client"
-import React from "react"
+import penguine from "../../../public/images/penguine.jpg"
+import penguine2 from "../../../public/images/penguine2.jpg"
+import church from "../../../public/images/church.jpg"
+import cape from "../../../public/images/cape.jpg"
 
 import { twMerge } from "tailwind-merge"
 import { TracingBeam } from "@/components/ui/tracing-beam"
@@ -128,10 +131,8 @@ const dummyContent = [
       </>
     ),
     badge: "React",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSecondary:
-      "https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=1200",
+    image: penguine.src,
+    imageSecondary: penguine2.src,
   },
   {
     title: "Exploring Stanley — Capital City Car Hire & Tours",
@@ -150,9 +151,7 @@ const dummyContent = [
       </>
     ),
     badge: "Changelog",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    imageSecondary:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=1200",
+    image: church.src,
+    imageSecondary: cape.src,
   },
 ]
