@@ -92,9 +92,12 @@ export default function AboutPage() {
             {/* Photo */}
             <div className="relative">
               <div className="aspect-4/5 w-full overflow-hidden rounded-3xl bg-zinc-100">
-                <div className="flex h-full items-center justify-center text-sm font-medium tracking-wide text-zinc-400 uppercase">
-                  Photo of Kamal
-                </div>
+                <img
+                  src="/images/kamal.jpeg"
+                  alt="Kamal Gaudel, owner of Falklands Explore and Falkland Islands tour guide"
+                  className="h-full w-full object-cover object-center"
+                  loading="lazy"
+                />
               </div>
               {/* Floating badge */}
               <div className="absolute -right-4 -bottom-5 rounded-2xl border border-zinc-200 bg-white px-6 py-4 shadow-lg sm:-right-6">

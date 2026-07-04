@@ -265,7 +265,7 @@ export default function Home() {
 
             <p className="mt-3 text-muted-foreground">
               Have a question about our Falkland Islands tours or vehicle hire
-              services? Send us a message and we'll get back to you as soon as
+              services? Send us a message and we&apos;ll get back to you as soon as
               possible.
             </p>
 

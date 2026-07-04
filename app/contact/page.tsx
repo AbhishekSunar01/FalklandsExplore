@@ -15,8 +15,8 @@ const contactDetails = [
   {
     icon: Mail,
     label: "Email",
-    value: "bookings@kedrivediscover.com",
-    href: "mailto:bookings@kedrivediscover.com",
+    value: "bookings@falklandsexplore.com",
+    href: "mailto:bookings@falklandsexplore.com",
   },
   {
     icon: Phone,
