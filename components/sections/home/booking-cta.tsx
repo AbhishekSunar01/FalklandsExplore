@@ -24,14 +24,14 @@ export function BookingCta() {
         </p>
 
         <a
-          href="tel:+50065338"
+          href="tel:+50056023"
           className="inline-flex items-center rounded-full bg-emerald-700 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-800"
         >
           BOOK YOUR ADVENTURE NOW
         </a>
 
         <p className="mt-6 text-xl font-bold tracking-wide text-white drop-shadow-md">
-          +500 65338
+          +500 65023
         </p>
       </div>
     </section>
