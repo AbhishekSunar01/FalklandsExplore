@@ -31,7 +31,7 @@ export function BookingCta() {
         </a>
 
         <p className="mt-6 text-xl font-bold tracking-wide text-white drop-shadow-md">
-          +500 65023
+          +500 56023
         </p>
       </div>
     </section>
