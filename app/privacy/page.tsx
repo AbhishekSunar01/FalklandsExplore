@@ -38,7 +38,7 @@ export default function PrivacyPage() {
             </p>
             <p>
               To request data updates or deletion, contact us at
-              bookings@kedrivediscover.com or call +500 65338.
+              bookings@kedrivediscover.com or call +500 56023.
             </p>
           </div>
         </div>

@@ -20,18 +20,20 @@ export function BookingCta() {
         </h2>
         <p className="mb-8 text-base text-white/90 drop-shadow-sm md:text-lg">
           Available for short breaks, holidays, and long-term contracts. Call us
-          on +500 65338 to check availability.
+          on +500 56023 to check availability.
         </p>
 
         <a
-          href="tel:+50056023"
+          href="/booking"
           className="inline-flex items-center rounded-full bg-emerald-700 px-8 py-3 text-sm font-semibold tracking-wide text-white transition hover:bg-emerald-800"
         >
           BOOK YOUR ADVENTURE NOW
         </a>
 
         <p className="mt-6 text-xl font-bold tracking-wide text-white drop-shadow-md">
-          +500 56023
+          <a href="tel:+50056023" className="hover:underline">
+            +500 56023
+          </a>
         </p>
       </div>
     </section>

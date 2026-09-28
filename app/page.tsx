@@ -31,7 +31,7 @@ const jsonLd = {
       description:
         "Car hire and guided tours in the Falkland Islands, based in Stanley. Self-drive 4\u00d74 rental, wildlife tours, battlefield excursions, and cruise passenger transfers.",
       url: "https://falklandsexplore.com",
-      telephone: "+50065338",
+      telephone: "+50056023",
       image: "https://falklandsexplore.com/images/hero.jpg",
       address: {
         "@type": "PostalAddress",

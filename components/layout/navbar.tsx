@@ -113,7 +113,7 @@ export function NavbarComponent() {
               </option>
             ))}
           </select>
-          <NavbarButton href="tel:+50065338" variant="primary">
+          <NavbarButton href="/booking" variant="primary">
             Book Now
           </NavbarButton>
         </div>
@@ -170,7 +170,7 @@ export function NavbarComponent() {
           <div className="flex w-full flex-col gap-4">
             <NavbarButton
               onClick={() => setIsMobileMenuOpen(false)}
-              href="tel:+50065338"
+              href="/booking"
               variant="primary"
               className="w-full"
             >

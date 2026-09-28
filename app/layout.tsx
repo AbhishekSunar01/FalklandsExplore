@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Falklands Explore",
   },
   description:
-    "Book car hire and guided tours in the Falkland Islands. Self-drive 4×4 rental from Stanley, wildlife tours to Volunteer Point, 1982 battlefield visits, and cruise passenger excursions. Call +500 65338.",
+    "Book car hire and guided tours in the Falkland Islands. Self-drive 4×4 rental from Stanley, wildlife tours to Volunteer Point, 1982 battlefield visits, and cruise passenger excursions. Call +500 56023.",
   keywords: [
     "Falkland Islands car hire",
     "Falkland Islands 4x4 hire",

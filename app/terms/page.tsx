@@ -40,7 +40,7 @@ export default function TermsPage() {
             </p>
             <p>
               For complete booking terms for your trip, contact
-              bookings@kedrivediscover.com or call +500 65338 before confirming
+              bookings@kedrivediscover.com or call +500 56023 before confirming
               payment.
             </p>
           </div>
